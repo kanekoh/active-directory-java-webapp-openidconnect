@@ -55,6 +55,8 @@ import com.nimbusds.openid.connect.sdk.AuthenticationResponseParser;
 import com.nimbusds.openid.connect.sdk.AuthenticationSuccessResponse;
 import org.apache.commons.lang3.StringUtils;
 
+import org.apache.log4j.Logger;
+
 public class BasicFilter implements Filter {
 
     private static Logger logger = Logger.getLogger(BasicFilter.class);
