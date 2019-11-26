@@ -1,4 +1,5 @@
 <html>
+
 <body>
 	<h2>ERROR PAGE!</h2>
 	<p>${error}</p>
@@ -6,4 +7,5 @@
 		<li><a href="<%=request.getContextPath()%>/index.jsp">Home Page</a></li>
 	</ul>
 </body>
+
 </html>
