@@ -308,7 +308,7 @@ public class BasicFilter implements Filter {
         // clientId = config.getInitParameter("client_id");
         clientId = System.getenv("AD_CLIENT_ID");
         logger.info("clientId " + clientId);
-        // authority = config.getServletContext().getInitParameter("authority");
+        authority = config.getServletContext().getInitParameter("authority");
         logger.info("authority " + authority);
         // tenant = config.getServletContext().getInitParameter("tenant");
         tenant = System.getenv("AD_TENANT");
