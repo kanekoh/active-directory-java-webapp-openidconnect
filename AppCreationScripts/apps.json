@@ -11,7 +11,7 @@
   "AADApps": [
     {
       "Id": "app",
-      "Name": "adal4j-sample",
+      "Name": "Webapp-Openidconnect",
       "IsPublicClient": false,
       "HomePage": "https://adal4j-adal4j-sample.apps.713b.example.opentlc.com/",
       "ReplyUrls": "https://adal4j-adal4j-sample.apps.713b.example.opentlc.com/adal4jsample/secure/aad",
