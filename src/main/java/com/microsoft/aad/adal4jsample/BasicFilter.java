@@ -55,11 +55,7 @@ import com.nimbusds.openid.connect.sdk.AuthenticationResponseParser;
 import com.nimbusds.openid.connect.sdk.AuthenticationSuccessResponse;
 import org.apache.commons.lang3.StringUtils;
 
-import org.apache.log4j.Logger;
-
 public class BasicFilter implements Filter {
-
-    private static Logger logger = Logger.getLogger(BasicFilter.class);
 
     public static final String STATES = "states";
     public static final String STATE = "state";
@@ -305,17 +301,10 @@ public class BasicFilter implements Filter {
     }
 
     public void init(FilterConfig config) throws ServletException {
-        // clientId = config.getInitParameter("client_id");
         clientId = System.getenv("AD_CLIENT_ID");
-        logger.info("clientId " + clientId);
         authority = config.getServletContext().getInitParameter("authority");
-        logger.info("authority " + authority);
-        // tenant = config.getServletContext().getInitParameter("tenant");
         tenant = System.getenv("AD_TENANT");
-        logger.info("tenant " + tenant);
-        // clientSecret = config.getInitParameter("secret_key");
         clientSecret = System.getenv("AD_SECRET_KEY");
-        logger.info("clientSecret " + clientSecret);
 
     }
 
