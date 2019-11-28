@@ -5,6 +5,8 @@
     "Client": "Java web application",
     "Service": "Microsoft Graph"
   },
+
+
   /*
   This section describes the Azure AD Applications to configure, and their dependencies
   */
@@ -13,33 +15,24 @@
       "Id": "app",
       "Name": "Webapp-Openidconnect",
       "IsPublicClient": false,
-      "HomePage": "https://adal4j-adal4j-sample.apps.713b.example.opentlc.com/",
-      "ReplyUrls": "https://adal4j-adal4j-sample.apps.713b.example.opentlc.com/adal4jsample/secure/aad",
+      "HomePage": "https://localhost:8000/",
+      "ReplyUrls": "http://localhost:8080/adal4jsample/secure/aad",
       "PasswordCredentials": "Auto",
       "RequiredResourcesAccess": [
         {
           "Resource": "Microsoft Graph",
-          "DelegatedPermissions": [
-            "Directory.Read.All"
-          ]
+          "DelegatedPermissions": [ "Directory.Read.All" ]
         }
       ],
       "ManualSteps": [
-        {
-          "Comment": "Open src/main/webapp/WEB-INF/web.xml and replace the following values:"
-        },
-        {
-          "Comment": "'YOUR_TENANT_NAME' with $tenantName"
-        },
-        {
-          "Comment": "'YOUR_CLIENT_ID' with $currentAppId"
-        },
-        {
-          "Comment": "'YOUR_CLIENT_SECRET' with $appAppKey"
-        }
+        { "Comment": "Open src/main/webapp/WEB-INF/web.xml and replace the following values:" },
+        { "Comment": "'YOUR_TENANT_NAME' with $tenantName" },
+        { "Comment": "'YOUR_CLIENT_ID' with $currentAppId" },
+        { "Comment": "'YOUR_CLIENT_SECRET' with $appAppKey" }
       ]
     }
   ],
+
   /*
     This section describes the users that need to be created to test the sample (if any) with their roles and groups
   */
@@ -50,6 +43,8 @@
     }
 */
   ],
+
+
   /*
     This section describes how to update (the code in configuration files) from the apps coordinates
    Each section describes a configuration file, for one of the apps, it's type (XML, JSon, plain text), its location
